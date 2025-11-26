@@ -1,0 +1,39 @@
+; Cargar estructuras y vectores globales
+(load "estructuras.lsp")
+
+; Cargar archivos de opciones del menú
+(load "registrarConsorcio.lsp")
+;(load "registrarAbogado.lsp")
+;(load "buscarConsorcio.lsp")
+;(load "buscarAbogado.lsp")
+;(load "contarLaboral.lsp")
+
+(defun menu ()
+  (print "------------------------------------------------------")
+  (print " SISTEMA DE CONSORCIOS DE ABOGADOS")
+  (print "Authors: JUAN PABLO MEDINA y EDWIN ORDONIEZ CHACON")
+  (print "Nota: Todos los datos tipo cadena se ingresan CON COMILLAS(string).")
+  (print "------------------------------------------------------")
+  (print "1. Registrar Consorcio de Abogados")
+  (print "2. Registrar Abogado")
+  (print "3. Buscar Consorcio por NIT")
+  (print "4. Buscar Abogado dentro de un Consorcio")
+  (print "5. Contar Abogados LABORAL en un Consorcio")
+  (print "6. Salir")
+  (print "------------------------------------------------------")
+  (print "Seleccione una opcion: ")
+
+  (let ((opcion (read)))
+    (cond
+      ((= opcion 1) (registrarConsorcio) (menu))
+      ;((= opcion 2) (registrar-abogado) (menu))
+      ;((= opcion 3) (buscar-consorcio) (menu))
+      ;((= opcion 4) (buscar-abogado) (menu))
+      ;((= opcion 5) (contar-laboral) (menu))
+      ((= opcion 6) (print "Saliendo del sistema..."))
+      (t (print "Opción inválida, intente de nuevo.") (menu))
+    )
+  )
+)
+
+(menu)
