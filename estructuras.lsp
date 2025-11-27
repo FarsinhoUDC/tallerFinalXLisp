@@ -20,19 +20,13 @@
 	tipo
 )
 
-;Creamos el array de consorcioAbogados
-(setq vConsorcio (make-array 2))
-
 ;Creamos un consorcio con su vector de abogados vacio
 (defun crearConsorcioVacio ()
   (make-consorcioAbogados
     :nit nil
     :nombre nil
     :modalidad nil
-    :abogados (make-array 2)
+    :abogados (make-array 2 :initial-element nil)
   )
 )
 
-;Se crea con la estructura de la funcion crearConsorcioVacio
-(setf (aref vConsorcio 0) (crearConsorcioVacio))
-(setf (aref vConsorcio 1) (crearConsorcioVacio))

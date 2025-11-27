@@ -42,7 +42,7 @@
             (if (or (equal modalidad "PUBLICO")
                     (equal modalidad "PRIVADO"))
                 (return modalidad)
-                (print "Modalidad invAlida. Intente de nuevo.")
+                (print "Modalidad invalida. Intente de nuevo.")
             )
           )
 
