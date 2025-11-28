@@ -20,6 +20,8 @@
 	tipo
 )
 
+
+
 ;Creamos un consorcio con su vector de abogados vacio
 (defun crearConsorcioVacio ()
   (make-consorcioAbogados
@@ -30,3 +32,7 @@
   )
 )
 
+;Creamos los arreglos y los inicializamos 
+(setq vConsorcio (make-array 2))
+(setf (aref vConsorcio 0) (crearConsorcioVacio))
+(setf (aref vConsorcio 1) (crearConsorcioVacio))

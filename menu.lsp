@@ -4,7 +4,7 @@
 ; Cargar archivos de opciones del menú
 (load "registrarConsorcio.lsp")
 (load "registrarAbogado.lsp")
-;(load "buscarConsorcio.lsp")
+(load "buscarConsorcio.lsp")
 ;(load "buscarAbogado.lsp")
 ;(load "contarLaboral.lsp")
 
@@ -27,7 +27,7 @@
     (cond
       ((= opcion 1) (registrarConsorcio) (menu))
       ((= opcion 2) (registrarAbogado) (menu))
-      ;((= opcion 3) (buscar-consorcio) (menu))
+      ((= opcion 3) (buscarConsorcio) (menu))
       ;((= opcion 4) (buscar-abogado) (menu))
       ;((= opcion 5) (contar-laboral) (menu))
       ((= opcion 6) (print "Saliendo del sistema..."))
@@ -36,7 +36,4 @@
   )
 )
 
-(setq vConsorcio (make-array 2))
-(setf (aref vConsorcio 0) (crearConsorcioVacio))
-(setf (aref vConsorcio 1) (crearConsorcioVacio))
 (menu)
